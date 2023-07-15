@@ -20,11 +20,7 @@ Not tested on other distros and BSPWM
 
 ##### Change wallpaper quickly using setwall script
 
-![setwall_withkeybind](attachments/setwall_withkeybind.gif)
-
 ##### Fully in background
-
-![background](attachments/fully_in_background.gif)
 
 ## Dependencies
 
@@ -58,11 +54,8 @@ It can also add wallpapers manually without wallpaper engine if you specify the 
 1. Make sure the wallpaper you want to preview is already downloaded in your steam library
 2. - Copy the url of the wallpaper you want to preview, and run the wallhelper script using the following command: `wallhelper -p`.
    - Alternatively, you can also specify the wallpaper id as an argument to the script: `wallhelper -p <wallpaper_id>`. The wallpaper id can be found in the url of any wallpapers you subscribed to.
-   - ![Example](attachments/wallpaper_id.png)
 
 3. The script will open mplayer/vlc to preview your wallpaper.
-
-![previewing](attachments/previewing.gif)
 
 #### Setting a wallpaper
 
@@ -72,11 +65,7 @@ It can also add wallpapers manually without wallpaper engine if you specify the 
 4. Subscribe to a wallpaper you like and wait for it to finish downloading
 5. - Copy the url of the wallpaper you just subscribed to, and run the wallhelper script using the following command: `wallhelper`.
 
-   ![setting_wallpaper](attachments/setting_wallpaper.gif)
-
    - Alternatively, you can also specify the wallpaper id as an argument to the script: `wallhelper <wallpaper_id>`. The wallpaper id can be found in the url of any wallpapers you subscribed to.
-
-   ![setting_wallpaper_with_id](attachments/setting_wallpaper_2.gif)
 
 6. The script will now look for the wallpaper in your steam workshop folder and copy it to `~/.config/video-wallpapers/wallpapers/`. You can use setwall script to cycle through the wallpapers in this folder.
 
@@ -101,21 +90,11 @@ You can:
 
 **Gifs must be optimized so that it is at your screen resolution, it will not auto stretch to your screen resolution!**
 
-##### Unoptimized (4k choppy video)
-
-![unoptimized](attachments/unoptimized.gif)
-
-##### Optimized (native resolution smoother video)
-
-![optimized](attachments/optimized.gif)
-
 #### Deleting a wallpaper
 
 1. Run the wallhelper script using the following command: `wallhelper -d`.
 2. This will delete the last added wallpaper in `~/.config/video-wallpapers/wallpapers/`.
 3. Alternatively, you can use `wallhelper -d <wallpaper-number>` to delete a specific wallpaper. (**Note:** The wallpaper number is the number in the name of the wallpaper in `~/.config/video-wallpapers/wallpapers/`, it is not the same as wallpaper id)
-
-![deleting](attachments/deleting.gif)
 
 ### Without Wallpaper Engine
 
@@ -152,9 +131,6 @@ Change the 'VIDEOPLAYER' variable in the script to change the video player used,
 Gifs must be optimized so that it is at your screen resolution, it will not auto stretch to your screen resolution!
 
 It is recommended to use this script with a keybind. (e.g. Super+Alt+W)
-
-![setwall_withoutkeybind](attachments/setwall.gif)
-
 # Autostart
 
 Either add the following to your xprofile:
