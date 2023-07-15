@@ -2,7 +2,7 @@
 
 # Use xwinwrap-git from AUR (https://github.com/takase1121/xwinwrap)
 
-VIDEOPLAYER="mplayer" # mplayer or mpv
+VIDEOPLAYER="mpv" # mplayer or mpv
 
 GREEN='\033[0;32m'
 NC='\033[0m'
@@ -16,7 +16,7 @@ new=$(($var + 1)) # Increment the wallpaper number
 if [[ $(echo $XDG_SESSION_DESKTOP | grep -Eo 'gnome|cinnamon|herbstluftwm') ]]; then
     args="-fs -ni -nf -b -un -fdt"
 else
-    args="-fs -ni -nf -b -un -ov -fdt"
+    args="-g 3440x1440+1080+0 -ni -nf -b -un -ov"
 fi
 
 # Test startup arg
@@ -61,9 +61,9 @@ else
 fi
 
 if [[ $VIDEOPLAYER == "mplayer" ]]; then
-    videoargs="-wid %WID -quiet -nosound $HOME/.config/video-wallpapers/wallpapers/$var.mp4 -loop 0 -nolirc -nomouseinput"
+    videoargs="-wid %WID -vf scale -zoom -xy 3440 -fs -quiet -nosound $HOME/.config/video-wallpapers/wallpapers/$var.mp4 -loop 0 -nolirc -nomouseinput"
 else
-    videoargs="-wid %WID -quiet --no-audio $HOME/.config/video-wallpapers/wallpapers/$var.mp4 -loop"
+    videoargs="-wid %WID --panscan=1.0 --geometry=3440x1440 -quiet --no-audio $HOME/.config/video-wallpapers/wallpapers/$var.mp4 -loop"
 fi
 
 setwall
